@@ -175,11 +175,11 @@ if __name__ == "__main__":
             pywhatkit.playonyt(song)
 
         elif "time" in command:
-            time = datetime.datetime.now().strftime('%I:%M %p')
-            print(time)
-            talk("Current time is " + time)
+            time_str = datetime.datetime.now().strftime('%I:%M %p')
+            print(time_str)
+            talk("Current time is " + time_str)
             with open("recording_records.txt", "a") as f:
-                f.write("Bot: Current time is " + time + "\n")
+                f.write("Bot: Current time is " + time_str + "\n")
 
         elif "find" in command:
             person = command.replace("find", "")
